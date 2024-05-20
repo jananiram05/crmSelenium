@@ -17,7 +17,7 @@ public class LoginPageTest extends BaseTest {
 	ExtentReportsUtility extentReportsUtility = ExtentReportsUtility.getInstance();
 
 	public LoginPageTest() {
-		super();// using this it will not throw null pointer exception
+		super();
 	}
 
 	@BeforeMethod
@@ -34,8 +34,7 @@ public class LoginPageTest extends BaseTest {
 		extentReportsUtility.logTestInfo("Validating login page title: " + title);
 		Assert.assertEquals(title, "Free CRM software for customer relationship management, sales, and support.");
 
-		// Assert.assertEquals(title, "Free CRM software for customer relationship
-		// management, sales, and support.");
+		
 	}
 
 	@Test(priority = 2)
@@ -55,7 +54,6 @@ public class LoginPageTest extends BaseTest {
 		homePage = loginPage.Login(prop.getProperty("username"), prop.getProperty("password"));// login method returns
 																								// homepage class object
 		extentReportsUtility.logTestInfo("Logging in with username: " + prop.getProperty("username"));
-		// Assert.assertTrue(homePage.verifyCorrectUserName(), "User name not matched");
 
 	}
 
