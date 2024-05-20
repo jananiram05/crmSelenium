@@ -15,7 +15,7 @@ import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtil;
 
 
-//contact page
+//HomeTest page
 public class HomePageTest extends BaseTest {
     HomePage homePage;
     LoginPage loginPage;
