@@ -24,8 +24,11 @@ public class TestUtil extends BaseTest{
 	final static String USER_DIR = System.getProperty("user.dir");
 
 	
-	public static String TESTDATA_SHEET_PATH = USER_DIR + "//src//main//java//"
-			+ "com//crm//qa//testdata//FreeCrmTestData.xlsx";
+	/*
+	 * public static String TESTDATA_SHEET_PATH = USER_DIR + "//src//main//java//" +
+	 * "com//crm//qa//testdata//FreeCrmTestData.xlsx";
+	 */
+	 public static String TESTDATA_SHEET_PATH=Constants.TEST_DATA;
 	
 	static Workbook book;
 	static Sheet sheet;

@@ -33,7 +33,6 @@ public class LoginPageTest extends BaseTest {
 		String title = loginPage.validateLoginPageTitle();
 		extentReportsUtility.logTestInfo("Validating login page title: " + title);
 		Assert.assertEquals(title, "Free CRM software for customer relationship management, sales, and support.");
-
 		
 	}
 

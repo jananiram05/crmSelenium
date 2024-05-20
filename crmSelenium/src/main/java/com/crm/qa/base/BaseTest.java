@@ -10,6 +10,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 
 import com.crm.qa.ExtentReportListener.ExtentReportsUtility;
@@ -23,7 +25,7 @@ public class BaseTest {
 	public static WebDriver driver;
 	public static Properties prop;
 	// public static EventFiringWebDriver e_driver;
-	public static ExtentReportsUtility extentReportsUtility;
+	public static ExtentReportsUtility extentReportsUtility = ExtentReportsUtility.getInstance();
 
 	public BaseTest() {
 		try {
@@ -37,6 +39,14 @@ public class BaseTest {
 			e.printStackTrace();
 		}
 	}
+	@BeforeMethod
+    public void setUp() {
+        initialization();
+		/*
+		 * extentReportsUtility = ExtentReportsUtility.getInstance();
+		 * extentReportsUtility.startExtentReport();
+		 */
+    }
 
 	public static void initialization() {
 		String browserName = prop.getProperty("browser");
@@ -56,6 +66,12 @@ public class BaseTest {
 		driver.get(prop.getProperty("url"));
 		extentReportsUtility = ExtentReportsUtility.getInstance();
 		extentReportsUtility.startExtentReport();
+	}
+
+	@AfterMethod
+	public void tearDown() {
+		extentReportsUtility.endReport();
+		driver.quit();
 	}
 
 	public WebDriver returnDriverInstance() {

@@ -38,6 +38,13 @@ public class HomePageTest extends BaseTest {
         contactsPage = new ContactsPage();
         log.info("Logging in with username: " + prop.getProperty("username"));
         homePage = loginPage.Login(prop.getProperty("username"), prop.getProperty("password"));
+        // Verify if home page is successfully initialized
+        if(homePage == null) {
+            log.error("Home page initialization failed. Login might have failed.");
+            Assert.fail("Home page initialization failed.");
+        } else {
+            log.info("Home page initialized successfully.");
+        }
     }
     
     @Test(priority = 1)
