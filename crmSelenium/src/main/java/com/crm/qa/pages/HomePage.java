@@ -79,7 +79,7 @@ public class HomePage extends BaseTest {
     
     public void clickOnNewContactLink() {
         try {
-            Actions action = new Actions(driver); // Always use Actions class for mouse hover actions
+            Actions action = new Actions(driver); 
             action.moveToElement(contactsLink).build().perform();
             log.info("Hovered over Contacts link.");
             newContactLink.click();

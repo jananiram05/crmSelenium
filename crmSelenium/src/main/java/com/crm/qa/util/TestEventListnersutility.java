@@ -6,6 +6,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import com.crm.qa.ExtentReportListener.ExtentReportsUtility;
+import com.crm.qa.base.BaseTest;
 
 public class TestEventListnersutility implements ITestListener {
 
@@ -23,7 +24,10 @@ public class TestEventListnersutility implements ITestListener {
     public void onTestFailure(ITestResult result) {
         extentreport.logTestFailed(result.getMethod().getMethodName());
         WebDriver driver = (WebDriver) result.getTestContext().getAttribute("driver");
-        // Now you can use the driver instance to take screenshots or perform any other actions
+        if (driver != null) {
+            String screenshotPath = new BaseTest().getScreenshotOfThePage(driver);
+            extentreport.logTestScreenshot(screenshotPath);
+        }
     }
 
     public void onStart(ITestContext context) {
