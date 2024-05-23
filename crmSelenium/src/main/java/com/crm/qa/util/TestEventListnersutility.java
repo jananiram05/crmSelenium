@@ -17,7 +17,6 @@ public class TestEventListnersutility implements ITestListener {
     }
 
     public void onTestSuccess(ITestResult result) {
-       // extentreport.logTestpassed(result.getMethod().getMethodName());
         extentreport.logTestPassed(result.getMethod().getMethodName());
     }
 

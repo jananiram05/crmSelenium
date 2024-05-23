@@ -52,7 +52,7 @@ public class ContactsPageTest extends BaseTest {
 			try {
 				driver.switchTo().defaultContent();
 				driver.switchTo().frame("mainpanel");
-				System.out.println("Frame 'mainpanel' is found.");
+				//System.out.println("Frame 'mainpanel' is found.");
 
 				contactsPage = homePage.clickOnContactsLink();
 			} catch (NoSuchFrameException e) {
