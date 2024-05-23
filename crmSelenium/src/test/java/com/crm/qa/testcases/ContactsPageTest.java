@@ -56,7 +56,7 @@ public class ContactsPageTest extends BaseTest {
 
 				contactsPage = homePage.clickOnContactsLink();
 			} catch (NoSuchFrameException e) {
-				//System.out.println("Frame 'mainpanel' not found.");
+				System.out.println("Frame 'mainpanel' not found.");
 			}
 		} else {
 			System.out.println("WebDriver instance is not initialized.");
