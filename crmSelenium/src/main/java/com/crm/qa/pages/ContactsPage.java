@@ -47,7 +47,7 @@ public class ContactsPage extends BaseTest{
 	
 	public void selectContactsByName(String name) {
         try {
-            Thread.sleep(2000); // Ideally, use WebDriverWait instead of Thread.sleep()
+            Thread.sleep(2000); 
             WebElement contactCheckbox = driver.findElement(By.xpath("//a[text()='"+name+"']//parent::td[@class='datalistrow']"
                 + "//preceding-sibling::td[@class='datalistrow']//input[@name='contact_id']"));
             contactCheckbox.click();

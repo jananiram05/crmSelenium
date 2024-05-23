@@ -31,7 +31,7 @@ public class HomePage extends BaseTest {
     private static final Logger log = Logger.getLogger(HomePage.class);
 
     public HomePage() {
-        PageFactory.initElements(driver, this); // 'this' means current class objects.
+        PageFactory.initElements(driver, this); 
         log.info("HomePage elements initialized.");
     }
     
