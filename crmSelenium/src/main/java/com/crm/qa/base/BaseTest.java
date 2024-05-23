@@ -30,7 +30,6 @@ public class BaseTest {
 
 	public static WebDriver driver;
 	public static Properties prop;
-	// public static EventFiringWebDriver e_driver;
 	public static ExtentReportsUtility extentReportsUtility = ExtentReportsUtility.getInstance();
 
 	public BaseTest() {
@@ -49,10 +48,7 @@ public class BaseTest {
 	@BeforeMethod
 	public void setUp() {
 		initialization();
-		/*
-		 * extentReportsUtility = ExtentReportsUtility.getInstance();
-		 * extentReportsUtility.startExtentReport();
-		 */
+		
 	}
 
 	public static void initialization() {
