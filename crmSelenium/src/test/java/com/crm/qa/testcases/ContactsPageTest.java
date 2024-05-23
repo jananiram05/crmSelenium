@@ -19,7 +19,7 @@ import com.crm.qa.pages.ContactsPage;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtil;
-
+//contactpage
 public class ContactsPageTest extends BaseTest {
 	LoginPage loginPage;
 	HomePage homePage;
